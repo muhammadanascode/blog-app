@@ -55,3 +55,47 @@
     background-color: rgb(0, 0, 24);
     color: white;
 }
+
+@media screen and (max-width:1280px) {
+    .title {
+        font-size: 50px;
+    }
+
+    .postTitle {
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .title {
+        font-size: 45px;
+    }
+
+    .postTitle {
+        font-size: 24px;
+    }
+
+    .imgContainer {
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .postTitle {
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width:648px) {
+    .title {
+        font-size: 35px;
+    }
+
+    .postTitle {
+        font-size: 19px;
+    }
+}
