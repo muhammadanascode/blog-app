@@ -1,10 +1,19 @@
 import "@/styles/globals.css";
 import { Navbar } from "../../components/navbar/Navbar";
 import { Footer } from "../../components/footer/Footer";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <div className="container">
         <div className="wrapper">
           <Navbar />
