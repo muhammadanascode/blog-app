@@ -14,9 +14,15 @@ export const Navbar = () => {
       </div>
       <div className={styles.logo}>ScriptSynergy</div>
       <div className={styles.links}>
-        <Link href={"/"}>Home</Link>
-        <Link href={"/contact"}>Contact</Link>
-        <Link href={"/about"}>About</Link>
+        <Link className={styles.link} href={"/"}>
+          Home
+        </Link>
+        <Link className={styles.link} href={"/contact"}>
+          Contact
+        </Link>
+        <Link className={styles.link} href={"/about"}>
+          About
+        </Link>
         <AuthLink />
       </div>
     </div>
