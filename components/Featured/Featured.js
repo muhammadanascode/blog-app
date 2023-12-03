@@ -10,7 +10,7 @@ export const Featured = () => {
       </h1>
       <div className={styles.post}>
         <div className={styles.imgContainer}>
-          <Image src={'/blog.jpg'} fill className={styles.image}/>
+          <Image src={'/blog.png'} fill className={styles.image}/>
         </div>
         <div className={styles.textContainer}>
           <h1 className={styles.postTitle}>Understanding the Basics of Blogging</h1>

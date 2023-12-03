@@ -15,7 +15,7 @@ const Card = () => {
           <span className={styles.category}>Coding</span>
         </div>
         <Link href={'/'}>
-          <h1>Unveiling the Art of Programming</h1>
+          <h2 className={styles.title}>Unveiling the Art of Programming</h2>
         </Link>
         <p className={styles.desc}>
           "Unveiling the Art of Programming" takes you on a captivating journey
