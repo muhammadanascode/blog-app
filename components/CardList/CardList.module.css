@@ -1,4 +1,8 @@
 .container {
-    display: flex;
-    flex: 5;
+    flex: 1;
+    width: 50%;
+}
+
+.title{
+    margin: 50px 0px;
 }

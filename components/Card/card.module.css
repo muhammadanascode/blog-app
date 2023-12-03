@@ -1,0 +1,52 @@
+.container {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 80%;
+}
+
+.imageContainer {
+    flex: 1;
+    height: 350px;
+    position: relative;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.date {
+    color: gray;
+}
+
+.category {
+    color: crimson;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.desc {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--softTextColor);
+    text-align: justify;
+}
+
+.link{
+    border: 1px solid gray;
+    padding: 3px;
+    width: max-content;
+    box-shadow: 0 2px 5px rgba(124, 124, 124, 0.5);
+}
+.link:hover {
+    box-shadow: 0 4px 10px rgba(24, 24, 24, 0.8);
+}
