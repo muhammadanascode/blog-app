@@ -2,13 +2,17 @@ import "@/styles/globals.css";
 import { Navbar } from "../../components/navbar/Navbar";
 import { Footer } from "../../components/footer/Footer";
 import Head from "next/head";
+import { SessionProvider } from "next-auth/react";
 
-export default function App({ Component, pageProps }) {
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}) {
   return (
     <>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
           href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap"
           rel="stylesheet"
@@ -16,9 +20,11 @@ export default function App({ Component, pageProps }) {
       </Head>
       <div className="container">
         <div className="wrapper">
-          <Navbar />
-          <Component {...pageProps} />
-          <Footer />
+          <SessionProvider session={session}>
+            <Navbar />
+            <Component {...pageProps} />
+            <Footer />
+          </SessionProvider>
         </div>
       </div>
     </>
