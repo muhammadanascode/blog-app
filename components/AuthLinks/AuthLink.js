@@ -8,7 +8,7 @@ const AuthLink = () => {
   const { data, status } = useSession();
   const [open, setOpen] = useState(false);
 
-  console.log("Status of use Session", status);
+  // console.log("Status of use Session", status);
 
   const handleSignOut = async () => {
     await signOut({
@@ -17,7 +17,6 @@ const AuthLink = () => {
     });
   };
 
-  console.log("Logout");
 
   return (
     <>

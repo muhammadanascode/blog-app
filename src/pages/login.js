@@ -1,14 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../styles/login.module.css";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 
 const login = () => {
-  const { data, status } = useSession();
-  console.log(data, status);
+  const { status } = useSession();
   const router = useRouter();
 
   if (status === "authenticated") {
@@ -16,7 +14,7 @@ const login = () => {
   }
 
   if (status === "loading") {
-    return "loading";
+    return "Loading plase wait...";
   }
 
   return (
