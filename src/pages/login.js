@@ -8,9 +8,10 @@ import { useRouter } from "next/router";
 const login = () => {
   const { status } = useSession();
   const router = useRouter();
+  console.log();(status)
 
   if (status === "authenticated") {
-    router.push("/");
+    router.replace("/");
   }
 
   if (status === "loading") {
