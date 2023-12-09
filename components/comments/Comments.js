@@ -2,10 +2,26 @@ import React from "react";
 import styles from "./comments.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { useSession } from "next-auth/react";
 Image;
+import useSWR from "swr";
 
-const Comments = () => {
-  const status = "authenticated";
+const fetcher = async (url) => {
+  const res = await fetch(url);
+  const data = await res.json();
+  if (!res.ok) {
+    const error = new Error(data.message);
+    throw error;
+  }
+  return data;
+};
+
+const Comments = ({ slug }) => {
+  const {status} = useSession();
+  const { data, isLoading } = useSWR(
+    `http://localhost:3000/api/comments?postSlug=${slug}`,
+    fetcher
+  );
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Comments</h1>
@@ -15,75 +31,37 @@ const Comments = () => {
           <button className={styles.button}>Send</button>
         </div>
       ) : (
-        <Link href="/">Login to write a comment</Link>
+        <Link href="/login" className={styles.loginlink}>
+          Login to write a comment
+        </Link>
       )}
       <div className={styles.comments}>
-        <div className={styles.comment}>
-          <div className={styles.user}>
-            <Image
-              src={"/coding.jpeg"}
-              alt="img"
-              width={30}
-              height={30}
-              className={styles.image}
-            />
-            <div className={styles.userInfo}>
-              <span className={styles.username}>Anas Sohail</span>
-              <span className={styles.date}>11.12.2023</span>
-            </div>
-          </div>
-          <p className={styles.desc}>
-            What a insightful read! Overcoming the challenges of coding
-            resonates with every learner on this journey. The emphasis on
-            persistence, diversity, and inclusive learning environments is spot
-            on. Kudos to the author for shedding light on the nuanced aspects of
-            the coding experience! #CodingJourney #TechExploration
-          </p>
-        </div>
-        <div className={styles.comment}>
-          <div className={styles.user}>
-            <Image
-              src={"/coding.jpeg"}
-              alt="img"
-              width={30}
-              height={30}
-              className={styles.image}
-            />
-            <div className={styles.userInfo}>
-              <span className={styles.username}>Anas Sohail</span>
-              <span className={styles.date}>11.12.2023</span>
-            </div>
-          </div>
-          <p className={styles.desc}>
-            What a insightful read! Overcoming the challenges of coding
-            resonates with every learner on this journey. The emphasis on
-            persistence, diversity, and inclusive learning environments is spot
-            on. Kudos to the author for shedding light on the nuanced aspects of
-            the coding experience! #CodingJourney #TechExploration
-          </p>
-        </div>
-        <div className={styles.comment}>
-          <div className={styles.user}>
-            <Image
-              src={"/coding.jpeg"}
-              alt="img"
-              width={30}
-              height={30}
-              className={styles.image}
-            />
-            <div className={styles.userInfo}>
-              <span className={styles.username}>Anas Sohail</span>
-              <span className={styles.date}>11.12.2023</span>
-            </div>
-          </div>
-          <p className={styles.desc}>
-            What a insightful read! Overcoming the challenges of coding
-            resonates with every learner on this journey. The emphasis on
-            persistence, diversity, and inclusive learning environments is spot
-            on. Kudos to the author for shedding light on the nuanced aspects of
-            the coding experience! #CodingJourney #TechExploration
-          </p>
-        </div>
+        {isLoading
+          ? "Loading"
+          : data?.map((item) => {
+              return (
+                <div className={styles.comment}>
+                  <div className={styles.user}>
+                    {item.user?.image && (
+                      <Image
+                        src={item.user.image}
+                        alt="img"
+                        width={30}
+                        height={30}
+                        className={styles.image}
+                      />
+                    )}
+                    <div className={styles.userInfo}>
+                      <span className={styles.username}>{item.user.name}</span>
+                      <span className={styles.date}>
+                        {item.createdAt.substring(0, 10)}
+                      </span>
+                    </div>
+                  </div>
+                  <p className={styles.desc}>{item.desc}</p>
+                </div>
+              );
+            })}
       </div>
     </div>
   );

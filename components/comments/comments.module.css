@@ -71,3 +71,8 @@
     color: var(--softTextColor);
     text-align: justify;
 }
+
+.loginlink{
+    color: blue;
+    text-decoration: underline;
+}

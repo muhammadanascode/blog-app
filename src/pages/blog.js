@@ -9,7 +9,7 @@ const blog = () => {
   const  query = router.query;
   const page = query?.page ? parseInt(query.page) : 1
   const {cat} = router.query
-  console.log(cat);
+  // console.log(cat);
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Style Blogs</h1>
