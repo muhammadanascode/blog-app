@@ -3,11 +3,11 @@ import styles from "./card.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const Card = () => {
+const Card = ({item}) => {
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
-        <Image src={"/post.jpg"} fill alt="postimg" className={styles.image} />
+        <Image src={item.img ? `${item.img}` : '/post.jpg'} fill alt="postimg" className={styles.image} /> 
       </div>
       <div className={styles.textContainer}>
         <div className={styles.detail}>
@@ -15,12 +15,10 @@ const Card = () => {
           <span className={styles.category}>Coding</span>
         </div>
         <Link href={'/'}>
-          <h2 className={styles.title}>Unveiling the Art of Programming</h2>
+          <h2 className={styles.title}>{item.title}</h2>
         </Link>
         <p className={styles.desc}>
-          "Unveiling the Art of Programming" takes you on a captivating journey
-          into the intricate world of coding, revealing the beauty and
-          creativity that underlies the seemingly logical realm of programming.
+          {item.desc}
         </p>
         <Link href={"/"} className={styles.link}>Read More</Link>
       </div>

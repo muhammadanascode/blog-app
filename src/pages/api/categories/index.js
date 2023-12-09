@@ -1,17 +1,15 @@
 // api/categories/index.js
 
-import { NextResponse } from "next/server";
 import prisma from "../../../../utils/connect";
+
 
 export default async function handler(req, res) {
   try {
-    const categories = await prisma.category.findMany();
-    const responseBody = JSON.stringify(categories);
-
-    return new NextResponse(responseBody, { status: 200 });
+    const categories = await prisma.Category.findMany();
+    return res.status(200).json(categories);
   } catch (error) {
-    const errorMessage = JSON.stringify({ message: "Something went wrong" });
-    
-    return new NextResponse(errorMessage, { status: 500 });
+    return res
+      .status(500)
+      .json({ message: "Something went wrong", error: error.message });
   }
 }
