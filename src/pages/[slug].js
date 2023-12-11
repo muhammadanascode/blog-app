@@ -87,7 +87,7 @@ const BlogPost = () => {
           />
           {/* Assuming the Comments component needs data as a prop */}
           <div className={styles.comment}>
-            <Comments data={data} slug={slug} />
+            <Comments data={data} postSlug={slug} />
           </div>
         </div>
         <Menu />

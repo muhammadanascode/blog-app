@@ -6,8 +6,9 @@ export default async function handler(req, res) {
   const { slug } = req.query;
 
   try {
-    const post = await prisma.post.findUnique({
+    const post = await prisma.post.update({
       where: { slug },
+      data: { views: { increment: 1 } },
       include: { user: true },
     });
 

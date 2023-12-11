@@ -3,7 +3,7 @@
     gap: 20px;
     height: 700px;
     position: relative;
-    
+
 }
 
 .input {
@@ -39,7 +39,7 @@
     border-color: #1a8917;
 }
 
-.icons{
+.icons {
     font-size: 30px;
     color: rgb(11, 0, 75);
 }
@@ -65,4 +65,25 @@
     color: white;
     cursor: pointer;
     border-radius: 20px;
+}
+
+.category-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+}
+
+.category-select option {
+    background-color: #fff;
+    color: #333;
+
+}
+
+.category-select:focus {
+    box-shadow: 0px 0px 2px #00a7f5;
+    outline: none;
 }

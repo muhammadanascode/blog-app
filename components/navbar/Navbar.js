@@ -29,6 +29,7 @@ export const Navbar = () => {
           <Link className={styles.link} href={"/about"}>
             About
           </Link>
+         <Link href={'/newpost'}>Write</Link> 
           <AuthLink />
         </div>
       </div>
