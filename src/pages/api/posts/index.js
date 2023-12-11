@@ -11,6 +11,9 @@ export default async function handler(req, res) {
     // console.log(page,cat);
     const query = {
       take: POST_PER_PAGE,
+      orderBy: {
+        createdAt: "desc",
+      },
       skip: POST_PER_PAGE * (page - 1),
       where: {
         ...(cat && { catSlug: cat }),

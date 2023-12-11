@@ -1,11 +1,10 @@
 import Link from "next/link";
 import styles from "./AuthLink.module.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { signOut, useSession } from "next-auth/react";
-import { useRouter } from "next/router";
 
 const AuthLink = () => {
-  const { data, status } = useSession();
+  const {status} = useSession();
   const [open, setOpen] = useState(false);
 
   // console.log("Status of use Session", status);
@@ -16,7 +15,6 @@ const AuthLink = () => {
       callbackUrl: "/login", // Specify the login page URL
     });
   };
-
 
   return (
     <>
@@ -38,16 +36,27 @@ const AuthLink = () => {
       </div>
       {open && (
         <div className={styles.responsiveMenu}>
-          <Link href={"/"}>Home</Link>
-          <Link href={"/contact"}>Contact</Link>
-          <Link href={"/about"}>About</Link>
+          <Link href={"/"} onClick={() => setOpen(!open)}>
+            Home
+          </Link>
+          <Link href={"/newpost"} onClick={() => setOpen(!open)}>
+            Write
+          </Link>
+          <Link href={"/contact"} onClick={() => setOpen(!open)}>
+            Contact
+          </Link>
+          <Link href={"/about"} onClick={() => setOpen(!open)}>
+            About
+          </Link>
           {status === "authenticated" ? (
             <span className={styles.link} onClick={handleSignOut}>
               Logout
             </span>
           ) : (
             <span>
-              <Link href={"/login"}>Login</Link>
+              <Link href={"/login"} onClick={() => setOpen(!open)}>
+                Login
+              </Link>
             </span>
           )}
         </div>

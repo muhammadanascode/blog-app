@@ -9,14 +9,20 @@ export const Navbar = () => {
     <>
       <div className={styles.container}>
         <div className={styles.social}>
-          <Image src={"/fblogo.png"} alt="fb" width={24} height={24} />
-          <Image src={"/instalogo.jpeg"} alt="insta" width={24} height={24} />
-          <Image
-            src={"/linkedlogo.png"}
-            alt="linkedin"
-            width={24}
-            height={24}
-          />
+          <Link href={"https://www.facebook.com/ANASCX"}>
+            <Image src={"/fblogo.png"} alt="fb" width={24} height={24} />
+          </Link>
+          <Link href={"https://www.instagram.com/anassohail12/"}>
+            <Image src={"/instalogo.jpeg"} alt="insta" width={24} height={24} />
+          </Link>
+          <Link href={"https://www.linkedin.com/in/anas-sohail-038026262/"}>
+            <Image
+              src={"/linkedlogo.png"}
+              alt="linkedin"
+              width={24}
+              height={24}
+            />
+          </Link>
         </div>
         <div className={styles.logo}>ScriptSynergy</div>
         <div className={styles.links}>
@@ -29,7 +35,9 @@ export const Navbar = () => {
           <Link className={styles.link} href={"/about"}>
             About
           </Link>
-         <Link href={'/newpost'}>Write</Link> 
+          <Link href={"/newpost"} className={styles.link}>
+            Write
+          </Link>
           <AuthLink />
         </div>
       </div>

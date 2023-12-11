@@ -20,9 +20,20 @@ export const Footer = () => {
           to life.
         </p>
         <div className={styles.icons}>
-          <Image src={"/fblogo.png"} width={18} height={18} alt="img" />
-          <Image src={"/instalogo.jpeg"} width={18} height={18} alt="img" />
-          <Image src={"/linkedlogo.png"} width={18} height={18} alt="img" />
+        <Link href={"https://www.facebook.com/ANASCX"}>
+            <Image src={"/fblogo.png"} alt="fb" width={18} height={18} />
+          </Link>
+          <Link href={"https://www.instagram.com/anassohail12/"}>
+            <Image src={"/instalogo.jpeg"} alt="insta" width={18} height={18} />
+          </Link>
+          <Link href={"https://www.linkedin.com/in/anas-sohail-038026262/"}>
+            <Image
+              src={"/linkedlogo.png"}
+              alt="linkedin"
+              width={18}
+              height={18}
+            />
+          </Link>
         </div>
       </div>
       <div className={styles.links}>
@@ -30,22 +41,22 @@ export const Footer = () => {
           <span className={styles.listTitle}>Links</span>
           <Link href={"/"}>Homepage</Link>
           <Link href={"/"}>Blog</Link>
-          <Link href={"/"}>About</Link>
-          <Link href={"/"}>Contact</Link>
+          <Link href={"/about"}>About</Link>
+          <Link href={"/contact"}>Contact</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Tags</span>
-          <Link href={"/"}>Style</Link>
-          <Link href={"/"}>Fashion</Link>
-          <Link href={"/"}>Food</Link>
-          <Link href={"/"}>Coding</Link>
+          <Link href={"/blog?cat=style"}>Style</Link>
+          <Link href={"/blog?cat=fashion"}>Fashion</Link>
+          <Link href={"/blog?cat=food"}>Food</Link>
+          <Link href={"/blog?cat=coding"}>Coding</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Social</span>
-          <Link href={"/"}>Facebook</Link>
-          <Link href={"/"}>Instagram</Link>
-          <Link href={"/"}>LinkedIn</Link>
-          <Link href={"/"}>Youtube</Link>
+          <Link href={"/https://www.facebook.com/ANASCX"}>Facebook</Link>
+          <Link href={"/https://www.instagram.com/anassohail12"}>Instagram</Link>
+          <Link href={"/https://www.linkedin.com/in/anas-sohail-038026262"}>LinkedIn</Link>
+          <Link href={"https://github.com/muhammadanascode"}>Github</Link>
         </div>
       </div>
     </div>

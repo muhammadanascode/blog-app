@@ -38,7 +38,7 @@
 
     .links {
         font-size: 18px;
-        gap: 15xpx;
+        gap: 15px;
     }
 }
 
@@ -56,11 +56,16 @@
     .logo {
         font-size: 24px;
     }
+    .links{
+        font-size: 15px;
+        gap: 10px;
+    }
 }
 
 @media screen and (max-width:640px) {
     .link {
         display: none;
+        
     }
 
     .links {

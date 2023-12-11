@@ -37,7 +37,7 @@ const CategoryList = () => {
           ? data.map((item) => (
               <Link
                 href={`/blog?cat=${item.slug}`}
-                key={item._id}
+                key={item.id}
                 className={`${styles.category} ${styles[item.slug]}`}
               >
                 {item.img&&<Image

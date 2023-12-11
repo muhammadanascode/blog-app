@@ -48,7 +48,7 @@ const CardList = ({ page, cat }) => {
       <div className={styles.posts}>
         {data.length > 0
           ? data.map((item) => {
-              return <Card item={item} key={item._id} />;
+              return <Card item={item} key={item.id} />;
             })
           : null}
       </div>

@@ -1,5 +1,6 @@
 .container {
     margin-top: 70px;
+    width: 100%;
 }
 
 .title {
@@ -10,6 +11,7 @@
 }
 
 .post {
+    width: 100%;
     margin-top: 40px;
     display: flex;
     align-items: center;
@@ -17,13 +19,13 @@
 }
 
 .imgContainer {
-    flex: 1;
+    width: 50%;
     height: 500px;
     position: relative;
 }
 
 .textContainer {
-    flex: 1;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -35,8 +37,9 @@
 
 .postTitle {
     font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .postDesc {
@@ -45,15 +48,22 @@
     text-align: justify;
     color: var(--softTextColor);
     font-family: serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .button {
     padding: 16px 20px;
     border: none;
     border-radius: 5px;
-    width: max-content;
+    width: 120px;
     background-color: rgb(0, 0, 24);
     color: white;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 24, 0.726);
 }
 
 @media screen and (max-width:1280px) {
@@ -88,14 +98,23 @@
     .postTitle {
         font-size: 21px;
     }
+
+    .textContainer {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:648px) {
     .title {
-        font-size: 35px;
+        font-size: 25px;
+        text-align: center;
     }
 
     .postTitle {
         font-size: 19px;
+    }
+
+    .postDesc {
+       width: 100%;
     }
 }
