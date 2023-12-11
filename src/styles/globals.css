@@ -23,31 +23,32 @@ a {
 
 .container {
     min-height: 100vh;
+    width: 100%;
     background-color: var(--bg);
     color: var(--textColor);
 }
 
 .wrapper {
-    max-width: 1536px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 80px;
     padding-right: 80px;
 }
 
-@media screen and (max-width:1536) {
+@media screen and (max-width:1536px) {
     .wrapper {
         max-width: 1366px;
     }
 }
 
-@media screen and (max-width:1280) {
+@media screen and (max-width:1280px) {
     .wrapper {
         max-width: 1024px;
     }
 }
 
-@media screen and (max-width:1024) {
+@media screen and (max-width:1024px) {
     .wrapper {
         max-width: 768px;
         padding-left: 40px;
@@ -55,13 +56,13 @@ a {
     }
 }
 
-@media screen and (max-width:768) {
+@media screen and (max-width:768px) {
     .wrapper {
         max-width: 640px;
     }
 }
 
-@media screen and (max-width:640) {
+@media screen and (max-width:640px) {
     .wrapper {
         max-width: 475px;
     }

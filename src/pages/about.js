@@ -6,7 +6,7 @@ const about = () => {
   return (
     <div className={styles.container}>
       <div className={styles.image}>
-        <Image src={"/Anas.jpg"} width={400} height={400} alt="img" />
+        <Image className={styles.img} src={"/Anas.jpg"} width={400} height={400} alt="img" />
       </div>
       <div className={styles.text}>
         <h1>Welcome to Script Synergy: Unleashing the Power of Words!</h1>
