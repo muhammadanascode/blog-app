@@ -21,7 +21,7 @@ import { app } from "../../utils/firebase";
 
 const storage = getStorage(app);
 
-const newpost = () => {
+const Newpost = () => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
   const [file, setFile] = useState(null);
@@ -175,4 +175,4 @@ const newpost = () => {
   );
 };
 
-export default newpost;
+export default Newpost;

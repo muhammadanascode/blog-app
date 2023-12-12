@@ -1,13 +1,10 @@
-import "@/styles/globals.css";
 import { Navbar } from "../../components/navbar/Navbar";
 import { Footer } from "../../components/footer/Footer";
 import Head from "next/head";
 import { SessionProvider } from "next-auth/react";
+import '../styles/globals.css'
 
-export default function App({
-  Component,
-  pageProps: { session, ...pageProps },
-}) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <>
       <Head>
@@ -30,3 +27,5 @@ export default function App({
     </>
   );
 }
+
+export default MyApp;

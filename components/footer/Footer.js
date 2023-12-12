@@ -23,10 +23,10 @@ export const Footer = () => {
         <Link href={"https://www.facebook.com/ANASCX"}>
             <Image src={"/fblogo.png"} alt="fb" width={18} height={18} />
           </Link>
-          <Link href={"https://www.instagram.com/anassohail12/"}>
+          <Link href={"https://www.instagram.com/anassohail12"}>
             <Image src={"/instalogo.jpeg"} alt="insta" width={18} height={18} />
           </Link>
-          <Link href={"https://www.linkedin.com/in/anas-sohail-038026262/"}>
+          <Link href={"https://www.linkedin.com/in/anas-sohail-038026262"}>
             <Image
               src={"/linkedlogo.png"}
               alt="linkedin"
@@ -53,9 +53,9 @@ export const Footer = () => {
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Social</span>
-          <Link href={"/https://www.facebook.com/ANASCX"}>Facebook</Link>
-          <Link href={"/https://www.instagram.com/anassohail12"}>Instagram</Link>
-          <Link href={"/https://www.linkedin.com/in/anas-sohail-038026262"}>LinkedIn</Link>
+          <Link href={"https://www.facebook.com/ANASCX"}>Facebook</Link>
+          <Link href={"https://www.instagram.com/anassohail12"}>Instagram</Link>
+          <Link href={"https://www.linkedin.com/in/anas-sohail-038026262"}>LinkedIn</Link>
           <Link href={"https://github.com/muhammadanascode"}>Github</Link>
         </div>
       </div>

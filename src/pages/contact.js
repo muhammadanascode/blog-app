@@ -23,10 +23,10 @@ const contact = () => {
           <Link href={"https://www.facebook.com/ANASCX"}>
             <Image src={"/fblogo.png"} alt="fb" width={48} height={48} />
           </Link>
-          <Link href={"https://www.instagram.com/anassohail12/"}>
+          <Link href={"https://www.instagram.com/anassohail12"}>
             <Image src={"/instalogo.jpeg"} alt="insta" width={48} height={48} />
           </Link>
-          <Link href={"https://www.linkedin.com/in/anas-sohail-038026262/"}>
+          <Link href={"https://www.linkedin.com/in/anas-sohail-038026262"}>
             <Image
               src={"/linkedlogo.png"}
               alt="linkedin"
