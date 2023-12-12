@@ -4,6 +4,7 @@ import React from "react";
 import styles from "../styles/login.module.css";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
+import { IoPersonSharp } from "react-icons/io5";
 
 const Login = () => {
   const { status } = useSession();
@@ -21,6 +22,7 @@ const Login = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
+     <div className={styles.person}> <IoPersonSharp className={styles.img} /> </div>
         <div className={styles.socialButton} onClick={() => signIn("google")}>
           Signin with google
         </div>

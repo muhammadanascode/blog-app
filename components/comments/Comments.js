@@ -62,7 +62,7 @@ const Comments = ({ postSlug }) => {
           ? "Loading"
           : data?.map((item) => {
               return (
-                <div className={styles.comment}>
+                <div className={styles.comment} key={item.id}>
                   <div className={styles.user}>
                     {item.user?.image && (
                       <Image

@@ -7,7 +7,7 @@
 
 .wrapper{
     background-color: rgb(235, 234, 234);
-    padding: 85px 100px;
+    padding: 20px 100px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -26,15 +26,16 @@
     justify-content: center;
 }
 
-.socialButton:first-child{
-    background-color: #ff5555;
+.person{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 180px;
 }
 
-.socialButton:nth-child(2){
-    background-color: #111;
-}
-.socialButton:nth-child(3){
-    background-color: #087BEA;
+.socialButton{
+    background-color: #ff5151;
+    margin-top: -10px;
 }
 
 @media screen and  (max-width:640px){

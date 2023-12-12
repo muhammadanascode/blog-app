@@ -12,9 +12,9 @@ const about = () => {
         <h1>Welcome to Script Synergy: Unleashing the Power of Words!</h1>
 
         <p>
-          Hello, I'm Muhammad Anas Sohail, a 19-year-old MERN stack developer
+          Hello, I&apos;m Muhammad Anas Sohail, a 19-year-old MERN stack developer
           with a passion for crafting digital experiences. Having studied BSCS
-          at the University of Karachi, I've embarked on a journey to bring
+          at the University of Karachi, I&apos;ve embarked on a journey to bring
           together technology and creativity.
         </p>
 
@@ -28,7 +28,7 @@ const about = () => {
 
         <h2>Why Script Synergy?</h2>
         <p>
-          With a deep understanding of the MERN stack, I've meticulously
+          With a deep understanding of the MERN stack, I&apos;ve meticulously
           designed this platform to provide a seamless and immersive experience
           for users. From sleek designs to intuitive interfaces, Script Synergy
           is crafted to make your journey through words a delightful one.
@@ -36,15 +36,15 @@ const about = () => {
 
         <h2>Join the Community:</h2>
         <p>
-          Whether you're a seasoned writer or a curious reader, Script Synergy
+          Whether you&apos;re a seasoned writer or a curious reader, Script Synergy
           welcomes you to be part of this vibrant community. Let your words find
-          their wings, and let's create a synergy of stories that resonate with
+          their wings, and let&apos;s create a synergy of stories that resonate with
           the world.
         </p>
 
         <p>
           Explore, create, and immerse yourself in the world of Script Synergy.
-          I can't wait to see the stories that unfold and the community that
+          I can&apos;t wait to see the stories that unfold and the community that
           flourishes.
         </p>
         <p>Happy reading and writing!</p>
