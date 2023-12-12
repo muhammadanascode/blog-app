@@ -1,0 +1,10 @@
+{
+    "builds": [
+      { "src": "next.config.js", "use": "@vercel/node" },
+      { "src": "prisma", "use": "@prisma/cli" }
+    ],
+    "env": {
+      "DATABASE_URL": "@DATABASE_URL"
+    }
+  }
+  
