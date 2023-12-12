@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 const getData = async (page, cat) => {
   // console.log("getData", cat);
   const res = await fetch(
-    `http://localhost:3000/api/posts?page=${page}${cat ? `&cat=${cat}` : ""}`,
+    `/api/posts?page=${page}${cat ? `&cat=${cat}` : ""}`,
     {
       cache: "no-store",
     }
