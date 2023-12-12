@@ -12,7 +12,7 @@ const Contact = () => {
           <a href="mailto:anassohail34343@gmail.com">
             &nbsp;anassohail34343@gmail.com
           </a>{' '}
-          We&apos;d love to hear from you!&rdquo;
+          We&apos;d love to hear from you!!&rdquo;
         </p>
       </div>
       <div className={styles.alternate}>
