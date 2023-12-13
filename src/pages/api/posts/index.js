@@ -40,7 +40,7 @@ export default async function handler(req, res) {
     if (!session) {
       return res.status(401).json({ message: "Not authenticated" });
     }
-    console.log("api called");
+    // console.log("api called");
     try {
       const post = await prisma.post.create({
         data: { ...body, userEmail: session.user.email },
