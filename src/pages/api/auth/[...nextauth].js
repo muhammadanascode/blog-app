@@ -5,6 +5,7 @@ import prisma from "../../../../utils/connect";
 
 export const authOptions = {
   // Configure one or more authentication providers
+  secret: process.env.NEXTAUTH_SECRET,
   adapter: PrismaAdapter(prisma),
   providers: [
     GoogleProvider({
