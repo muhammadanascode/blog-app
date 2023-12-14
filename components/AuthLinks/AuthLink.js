@@ -8,7 +8,6 @@ import { useRouter } from "next/router";
 const AuthLink = () => {
   const { status } = useSession();
   const [open, setOpen] = useState(false);
-  const route = useRouter();
 
   const handleSignOut = async () => {
     toast.success("Logged out successfully", {
