@@ -11,6 +11,7 @@ const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.bubble.css";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
+import { toast } from "react-toastify";
 import {
   getStorage,
   uploadBytesResumable,
@@ -60,11 +61,28 @@ const Newpost = () => {
             }
           },
           (error) => {
-            // Handle unsuccessful uploads
+            toast.error("Failed to post", {
+              position: "top-center",
+              autoClose: 500,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
           },
           () => {
-            // Handle successful uploads on complete
-            // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+            toast.success("Blog posted successfully", {
+              position: "top-center",
+              autoClose: 500,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
               setMedia(downloadURL);
             });
@@ -77,6 +95,17 @@ const Newpost = () => {
 
   if (status === "unauthenticated") {
     router.replace("/");
+    toast.error("Login to write a blog", {
+      position: "top-center",
+      autoClose: 500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    })
+    return
   }
 
   if (status === "loading") {
@@ -99,7 +128,6 @@ const Newpost = () => {
     catSlug: cat,
   };
 
-  console.log(obj);
 
   const handleSubmit = async () => {
     const res = await fetch("/api/posts", {

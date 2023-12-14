@@ -1,19 +1,32 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../styles/login.module.css";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { IoPersonSharp } from "react-icons/io5";
+import {toast } from "react-toastify";
 
 const Login = () => {
   const { status } = useSession();
   const router = useRouter();
   console.log(status);
 
-  if (status === "authenticated") {
-    router.replace("/");
-  }
+  useEffect(() => {
+    if (status === "authenticated") {
+      router.replace("/");
+      toast.success("Logged in successfully", {
+        position: "top-center",
+        autoClose: 500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  }, [status, router]);
 
   if (status === "loading") {
     return "Loading plase wait...";

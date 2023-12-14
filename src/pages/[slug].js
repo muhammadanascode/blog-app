@@ -6,9 +6,7 @@ import Image from "next/image";
 import Comments from "../../components/comments/Comments";
 
 const getData = async (slug) => {
-  const res = await fetch(`/api/posts/${slug}`, {
-    cache: "no-store",
-  });
+  const res = await fetch(`/api/posts/${slug}`);
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
