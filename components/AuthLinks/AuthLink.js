@@ -3,16 +3,14 @@ import styles from "./AuthLink.module.css";
 import React, { useState } from "react";
 import { signOut, useSession } from "next-auth/react";
 import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 
 const AuthLink = () => {
   const { status } = useSession();
   const [open, setOpen] = useState(false);
+  const route = useRouter();
 
   const handleSignOut = async () => {
-    await signOut({
-      redirect: false,
-    });
-
     toast.success("Logged out successfully", {
       position: "top-center",
       autoClose: 500,
@@ -23,7 +21,10 @@ const AuthLink = () => {
       progress: undefined,
       theme: "light",
     });
-
+    await signOut({
+      redirect: true,
+      callbackUrl: "/login", // Specify the login page URL
+    });
   };
 
   return (
