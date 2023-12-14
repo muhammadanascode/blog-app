@@ -10,7 +10,6 @@ import {toast } from "react-toastify";
 const Login = () => {
   const { status } = useSession();
   const router = useRouter();
-  console.log(status);
 
   useEffect(() => {
     if (status === "authenticated") {

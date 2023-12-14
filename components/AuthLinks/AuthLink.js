@@ -2,19 +2,17 @@ import Link from "next/link";
 import styles from "./AuthLink.module.css";
 import React, { useState } from "react";
 import { signOut, useSession } from "next-auth/react";
-import {toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 const AuthLink = () => {
-  const {status} = useSession();
+  const { status } = useSession();
   const [open, setOpen] = useState(false);
-
-  // console.log("Status of use Session", status);
 
   const handleSignOut = async () => {
     await signOut({
-      redirect: true,
-      callbackUrl: "/login", // Specify the login page URL
+      redirect: false,
     });
+
     toast.success("Logged out successfully", {
       position: "top-center",
       autoClose: 500,
@@ -24,7 +22,7 @@ const AuthLink = () => {
       draggable: true,
       progress: undefined,
       theme: "light",
-    })
+    });
 
   };
 
