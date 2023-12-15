@@ -58,7 +58,7 @@ const AuthLink = () => {
             About
           </Link>
           {status === "authenticated" ? (
-            <span className={styles.link} onClick={handleSignOut}>
+            <span className={styles.link1} onClick={handleSignOut}>
               Logout
             </span>
           ) : (

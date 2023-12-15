@@ -34,6 +34,10 @@
     cursor: pointer;
 }
 
+.link1{
+    cursor: pointer;
+}
+
 @media screen and (max-width:640px) {
     .burger {
         display: flex;

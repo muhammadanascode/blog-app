@@ -70,7 +70,7 @@
 
 .publish {
     position: absolute;
-    top: 140px;
+    top: 25px;
     right: 20px;
     padding: 10px 20px;
     border: none;
@@ -103,7 +103,7 @@
 
 @media screen and (max-width:780px) {
     .publish{
-        top: 60px;
+        top: 40px;
         right: 10px;
     }
 }
