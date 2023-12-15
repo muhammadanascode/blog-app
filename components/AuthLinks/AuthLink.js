@@ -3,7 +3,6 @@ import styles from "./AuthLink.module.css";
 import React, { useState } from "react";
 import { signOut, useSession } from "next-auth/react";
 import { toast } from "react-toastify";
-import { useRouter } from "next/router";
 
 const AuthLink = () => {
   const { status } = useSession();
